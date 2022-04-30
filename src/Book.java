@@ -35,7 +35,7 @@ public class Book {
     // Методы
 
     public String toString() {
-        return "Название книги " + this.name + " Автор книги: " + this.author.getName() + " " + this.author.getSurName() + " Дата выпуска: " + this.yearOfPublication;
+        return "Название книги " + this.name + " Автор книги: " + author.toString()  + " Дата выпуска: " + this.yearOfPublication;
     }
 
 //    public boolean equals(Object other) {

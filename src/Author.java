@@ -11,7 +11,7 @@ public class Author {
         this.surName = surName;
     }
 
-    //Сеттеры
+    //Геттеры
     public String getName() {
         return name;
     }
@@ -29,11 +29,8 @@ public class Author {
         if (this.getClass() != other.getClass()) {
             return false;
         }
-        if (!this.name.equals(((Author) other).getName()) && !this.surName.equals(((Author) other).getSurName())) {
-            return false;
-        }
         Author author = (Author) other;
-        return name.equals(author.name); //не очень понял, зачем возвращать все элементы, если мы используем метод и получаем ответ true/false
+        return !this.name.equals(((Author) other).getName()) && !this.surName.equals(((Author) other).getSurName());
     }
 
     @Override
